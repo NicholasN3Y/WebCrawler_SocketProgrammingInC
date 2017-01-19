@@ -1,0 +1,34 @@
+Author: Nicholas Ng Nuo Yang
+Purpose: This program is to fulfil Assignment 2 of CS3103
+
+Usage of the program
+The directory of the executable is as follows:
+. 
+|__README
+|__x64
+      |__Release
+		|__SPWebCrawler.exe
+|__url.dat
+|__crawlerResult.txt
+|__consoleLog.txt
+|__communication_info.txt
+|__average_comm_info.txt
+
+The program takes in two arguments:
+<1> the number of web links obtained as a result of crawling.
+<2)> the number of threads to use.
+
+To invoke the program:
+SPWebCrawler.exe <1> <2>
+
+The program starts crawling from a list of weblinks that can be found in "url.dat".
+The results of the crawler can be found in "crawlerResult.txt"
+The sequence of connections to the links can be found at "consoleLog.txt"
+The communication info for each webpage conection can be found at "communication_info.txt"
+A conclusion of communication info depicting average for each webserver can be found at "average_comm_info.txt"
+
+
+To keep track of the urls, we make use of a queue and an unordered map such that urls that have already been visited is not repeatedly visited.
+We make use of the boost library for HTML parsing.
+
+
